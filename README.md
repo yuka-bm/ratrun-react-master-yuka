@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## 方針
+1. 生徒にratrun-react-master-[名前]のリポジトリ作成
+2. git clone https://github.com/moyuta/ratrun-react-master-template
+3. ディレクトリ名を変更 (ratrun-react-master-[名前])
+4. cd ratrun-react-master-[名前]
+5. motegiのリポジトリとの接続を切断 git remote rm origin
+6. 自分のリポジトリと接続 git remote origin [repoのURL]
+
+## node
+node 19以上
+
 ## Getting Started
 
 First, run the development server:
