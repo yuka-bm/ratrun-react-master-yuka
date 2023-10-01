@@ -15,10 +15,10 @@ const Registration: React.FC = () => {
       <h2>新規会員登録</h2>
       <div className="container">
         <label htmlFor="email" className="label">メールアドレス</label>
-        <input type="email" name="email" id="email" className="input" autoFocus />
+        <input type="email" name="email" id="email" placeholder="taro.tanaka@freelance-start.com" autoFocus />
         <label htmlFor="password" className="label">パスワード</label>
         <div>
-          <input type={passwordShown ? "text" : "password"} name="password" id="password" className="input" />
+          <input type={passwordShown ? "text" : "password"} name="password" id="password" placeholder="パスワード(半角英数6文字以上)" />
           <span onClick={togglePassword} role="presentation" className="eye">{passwordShown ? <Image src={require("@/assets/svg/eye.svg")} alt="eye" /> : <Image src={require("@/assets/svg/eye-slash.svg")} alt="/eye-slash" />}</span>
         </div>
       </div>
