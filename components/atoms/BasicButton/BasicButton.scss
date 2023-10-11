@@ -1,0 +1,19 @@
+.basic_button {
+    margin-top: 2em;
+    margin-bottom: 3em;
+    display: flex;
+    justify-content: center;
+
+    .reg-button {
+        padding: 10px 40px;
+        font-size: 1.1em;
+        background-color: rgb(243, 130, 147);
+        border-radius: 5px;
+        border: 0;
+        color: white;
+    }
+
+    .reg-button:hover {
+        background-color: rgb(249, 95, 118);
+    }
+}

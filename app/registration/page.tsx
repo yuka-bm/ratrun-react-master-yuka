@@ -1,32 +1,20 @@
 "use client";
 import "./page.scss";
-import Image from "next/image";
-import { useState } from 'react';
+import envelope from "@/assets/svg/envelope.svg";
+import BasicInput from "@/components/atoms/BasicInput/BasicInput";
+import BasicButton from "@/components/atoms/BasicButton/BasicButton";
 
 const Registration: React.FC = () => {
-  const [passwordShown, setPasswordShown] = useState(false);
-
-  const togglePassword = () => {
-    setPasswordShown(!passwordShown);
-  };
 
   return (
     <div className="registration">
       <h2>新規会員登録</h2>
       <div className="container">
-        <label htmlFor="email" className="label">メールアドレス</label>
-        <input type="email" name="email" id="email" placeholder="taro.tanaka@freelance-start.com" autoFocus />
-        <label htmlFor="password" className="label">パスワード</label>
-        <div>
-          <input type={passwordShown ? "text" : "password"} name="password" id="password" placeholder="パスワード(半角英数6文字以上)" />
-          <span onClick={togglePassword} role="presentation" className="eye">{passwordShown ? <Image src={require("@/assets/svg/eye.svg")} alt="eye" /> : <Image src={require("@/assets/svg/eye-slash.svg")} alt="/eye-slash" />}</span>
-        </div>
+        <BasicInput label="メールアドレス" type="email" name="email" placeholder="taro.tanaka@freelance-start.com" value="" isHide={false}  />
+        <BasicInput label="パスワード" type="password" name="password" placeholder="パスワード(半角英数6文字以上)" value=""  isHide={true}  />
       </div>
-      <div className="register">
-        <button type="submit" className="reg-button">
-          <Image src={require("@/assets/svg/envelope.svg")} alt="envelope" /> 同意して新規登録する(無料)
-        </button>
-      </div>
+
+      <BasicButton type="submit" name="reg-button" image={envelope} value="同意して新規登録する(無料)" />
     </div>
   );
 };
