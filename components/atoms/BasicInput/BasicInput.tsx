@@ -25,11 +25,12 @@ const BasicInput: React.FC<BasicInputProps> = ({ label, type, name, placeholder,
     <div className="basic_input">
       <label htmlFor={name}>{label}</label>
       <input type={type} name={name} id={name} placeholder={placeholder} value={value} />
-      {isHide ? (
+      {isHide ? 
+        null : (
         <span onClick={togglePassword} role="presentation" className="eye">
           {passwordShown ? <Image src={eye} alt="eye" /> : <Image src={slash} alt="/eye-slash" />}
         </span>
-      ) : null}
+      )}
     </div>
   );
 };
