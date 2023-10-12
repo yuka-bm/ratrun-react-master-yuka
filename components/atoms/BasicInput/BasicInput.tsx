@@ -10,10 +10,11 @@ interface BasicInputProps {
   name: string;
   placeholder: string;
   value: string;
-  isHide: boolean;
+  isHide?: boolean;
+  inputValue?: (data: { name: string; value: string }) => void;
 }
 
-const BasicInput: React.FC<BasicInputProps> = ({ label, type, name, placeholder, value, isHide }) => {
+const BasicInput: React.FC<BasicInputProps> = ({ label, type, name, placeholder, value, isHide, inputValue }) => {
 
   const [passwordShown, setPasswordShown] = useState(false);
 
@@ -21,16 +22,23 @@ const BasicInput: React.FC<BasicInputProps> = ({ label, type, name, placeholder,
     setPasswordShown(!passwordShown);
   };
 
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = event.target.value;
+    if (inputValue) {
+      inputValue({ name, value: newValue });
+    }
+  };
+
   return (
     <div className="basic_input">
       <label htmlFor={name}>{label}</label>
-      <input type={type} name={name} id={name} placeholder={placeholder} value={value} />
+      <input type={(isHide && passwordShown) ? "text" : type} name={name} id={name} placeholder={placeholder} value={value}  onChange={handleInputChange} />
       {isHide ? 
-        null : (
-        <span onClick={togglePassword} role="presentation" className="eye">
+        (<span onClick={togglePassword} role="presentation" className="eye">
           {passwordShown ? <Image src={eye} alt="eye" /> : <Image src={slash} alt="/eye-slash" />}
         </span>
-      )}
+        ) : null
+      }
     </div>
   );
 };
