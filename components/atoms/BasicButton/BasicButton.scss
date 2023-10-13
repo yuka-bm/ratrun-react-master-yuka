@@ -16,4 +16,17 @@
     .reg-button:hover {
         background-color: rgb(249, 95, 118);
     }
+
+    .login-button {
+        padding: 10px 40px;
+        font-size: 1.1em;
+        background-color: rgb(102, 174, 169);
+        border-radius: 5px;
+        border: 0;
+        color: white;
+    }
+
+    .login-button:hover {
+        background-color: rgb(79, 136, 132);
+    }
 }
