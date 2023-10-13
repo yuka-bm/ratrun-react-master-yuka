@@ -1,0 +1,19 @@
+.registration {
+    margin: auto;
+    margin-top: 30px;
+    width: 90%;
+
+    .container {
+        margin-top: 1em;
+
+        div {
+            position: relative;
+
+            .eye {
+                position: absolute;
+                top: 50%;
+                right: 20px;
+            }
+        }
+    }
+}
