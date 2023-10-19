@@ -4,6 +4,8 @@ import { useState } from 'react';
 import envelope from "@/assets/svg/envelope.svg";
 import BasicInput from "@/components/atoms/BasicInput/BasicInput";
 import BasicButton from "@/components/atoms/BasicButton/BasicButton";
+import { postLogin } from "@/api/user";
+import { useRouter } from "next/navigation";
 
 const Login: React.FC = () => {
 
@@ -16,6 +18,18 @@ const Login: React.FC = () => {
     setUser({ ...user, [data.name]: data.value });
   };
 
+  const router = useRouter();
+  const handleClickSubmit = async () => {
+    try {
+      await postLogin(user);
+      alert("ログインに成功しました。画面を遷移します。");
+      router.push("/login");
+    } catch (error) {
+      //
+      alert("ログインに失敗しました。");
+    }
+  };
+
   return (
     <div className="login">
       <h2>ログイン</h2>
@@ -25,7 +39,7 @@ const Login: React.FC = () => {
         <a href="">パスワードを忘れた方はこちら</a>
       </div>
 
-      <BasicButton type="submit" name="login-button" image={envelope} value="メールアドレスでログインする" />
+      <BasicButton type="submit" name="login-button" image={envelope} value="メールアドレスでログインする" clickSubmit={handleClickSubmit} />
     </div>
   );
 };
