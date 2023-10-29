@@ -25,8 +25,7 @@ const BasicInput: React.FC<BasicInputProps> = ({ label, type, name, placeholder,
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value;
     if (inputValue) {
-      inputValue({ name, value: newValue });
-    }
+      inputValue({ name, value: newValue });    }
   };
 
   return (

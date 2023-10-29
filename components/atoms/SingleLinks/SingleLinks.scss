@@ -1,0 +1,29 @@
+.single-button {
+    margin-bottom: 20px;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1.5em;
+
+        li {
+            margin-right: 10px;
+            margin-bottom: 30px;
+    
+            .options {
+                display: block;
+
+                a {
+                    padding: 10px 15px;
+                    border-radius: 20px;
+                    border: 1px solid gray;
+                    background-color: white;
+                }
+        
+                a:hover {
+                    background-color: lightgray;
+                }
+            }
+        }
+    }
+}

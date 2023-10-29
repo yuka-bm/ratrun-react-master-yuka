@@ -29,4 +29,17 @@
     .login-button:hover {
         background-color: rgb(79, 136, 132);
     }
+
+    .search-button {
+        padding: 10px 1.5em;
+        font-size: 1.1em;
+        background-color: rgb(102, 174, 169);
+        border-radius: 30px;
+        border: 0;
+        color: white;
+    }
+
+    .search-button:hover {
+        background-color: rgb(79, 136, 132);
+    }
 }
