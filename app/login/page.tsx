@@ -2,8 +2,8 @@
 import "./page.scss";
 import { useState } from 'react';
 import envelope from "@/assets/svg/envelope.svg";
-import BasicInput from "@/components/atoms/BasicInput/BasicInput";
-import BasicButton from "@/components/atoms/BasicButton/BasicButton";
+import BasicInput from "@/components/atoms/Inputs/BasicInput";
+import BasicButton from "@/components/atoms/Buttons/BasicButton";
 import { postLogin } from "@/api/user";
 import { useRouter } from "next/navigation";
 

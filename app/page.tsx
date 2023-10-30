@@ -1,7 +1,8 @@
-import AppTitle from "@/components/atoms/AppTitle/AppTitle";
-import SearchBar from "@/components/atoms/SearchBar/SearchBar";
-import SingleLinks, { LinkItem } from "@/components/atoms/SingleLinks/SingleLinks";
-import JobsSlider, { JobItem } from "@/components/atoms/JobsSlider/JobsSlider";
+import "./page.scss";
+import SearchBar from "@/components/atoms/Forms/SearchForm";
+import SingleLinks, { LinkItem } from "@/components/atoms/Links/SingleLinks";
+import JobsSlider, { JobItem } from "@/components/atoms/Sliders/JobsSlider";
+import Image from "next/image";
 
 const Home: React.FC = () => {
 
@@ -33,27 +34,53 @@ const Home: React.FC = () => {
 
   return (
     <div className="top">
-      <AppTitle />
+      <div className="app-title">
+        <div className="title">
+          <div className="logo-area">
+              <Image src={require("@/assets/img/rocket.png")} alt="rocket" />
+          </div>
+          <h1>&nbsp;フリーランススタート</h1>
+        </div>
+        <p>案件・求人数 XXX 件 (YYYY/MM/DD 更新)</p>
+        <p>フリーランスエンジニア専用のIT求人・案件検索サイトで仕事探し</p>
+      </div>
+
       <SearchBar />
-      <SingleLinks title="おすすめキーワードで探す" link={keyword} />
+      <h4>おすすめキーワードで探す</h4>
+      <SingleLinks link={keyword} />
 
       <h3>開発言語・環境でフリーランス求人・案件を探す</h3>
-      <SingleLinks title="開発言語" link={language} />
-      <SingleLinks title="フレームワーク" link={language} />
-      <SingleLinks title="インフラ" link={language} />
-      <SingleLinks title="デザイン" link={language} />
-      <SingleLinks title="その他" link={language} />
+      
+      <h4>開発言語</h4>
+      <SingleLinks link={language} />
+      <h4>フレームワーク</h4>
+      <SingleLinks link={language} />
+      <h4>インフラ</h4>
+      <SingleLinks link={language} />
+      <h4>デザイン</h4>
+      <SingleLinks link={language} />
+      <h4>その他</h4>
+      <SingleLinks link={language} />
 
       <h3>勤務地でフリーランス求人・案件を探す</h3>
-      <SingleLinks title="北海道" link={language} />
-      <SingleLinks title="東北" link={language} />
-      <SingleLinks title="関東" link={language} />
-      <SingleLinks title="中部" link={language} />
-      <SingleLinks title="近畿" link={language} />
-      <SingleLinks title="中国" link={language} />
-      <SingleLinks title="四国" link={language} />
-      <SingleLinks title="九州" link={language} />
-      <SingleLinks title="沖縄" link={language} />
+      <h4>北海道</h4>
+      <SingleLinks link={language} />
+      <h4>東北</h4>
+      <SingleLinks link={language} />
+      <h4>関東</h4>
+      <SingleLinks link={language} />
+      <h4>中部</h4>
+      <SingleLinks link={language} />
+      <h4>近畿</h4>
+      <SingleLinks link={language} />
+      <h4>中国</h4>
+      <SingleLinks link={language} />
+      <h4>四国</h4>
+      <SingleLinks link={language} />
+      <h4>九州</h4>
+      <SingleLinks link={language} />
+      <h4>沖縄</h4>
+      <SingleLinks link={language} />
 
       <h3>新着フリーランス求人・案件</h3>
       <div className="jobs">

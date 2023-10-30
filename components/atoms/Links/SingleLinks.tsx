@@ -1,7 +1,6 @@
 import "./SingleLinks.scss";
 
 interface LinkItemProps {
-  title: string;
   link: LinkItem[];
 }
 
@@ -10,11 +9,10 @@ export interface LinkItem {
   url: string;
 }
 
-const SingleLinks: React.FC<LinkItemProps> = ({ title, link }) => {
+const SingleLinks: React.FC<LinkItemProps> = ({ link }) => {
 
   return (
     <div className="single-button">
-      <h4>{title}</h4>
       <ul>
         {link.map((list, index) => (
           <li key={index}>

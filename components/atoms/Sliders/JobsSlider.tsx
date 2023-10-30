@@ -1,6 +1,7 @@
 "use client";
 import "./JobsSlider.scss";
 import "@splidejs/react-splide/css";
+// @ts-ignore
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import React, { useRef, RefObject } from "react";
 

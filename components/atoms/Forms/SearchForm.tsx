@@ -1,8 +1,8 @@
 "use client";
-import "./SearchBar.scss";
+import "./SearchForm.scss";
 import { useState } from 'react';
-import BasicInput from "../BasicInput/BasicInput";
-import BasicButton from "../BasicButton/BasicButton";
+import BasicInput from "../Inputs/BasicInput";
+import BasicButton from "../Buttons/BasicButton";
 
 const SearchBar: React.FC = () => {
   const [input, setUser] = useState({
