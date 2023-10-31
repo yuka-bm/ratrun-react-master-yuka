@@ -38,20 +38,21 @@ const JobsSlider: React.FC<any> = ({ jobOpenings }) => {
         aria-label="Main"
         onMove={(splide: any, prev: number, next: number) => handleClick(prev)}
       >
-        {jobOpenings.map((list: JobItem, index: number) => (
-          <SplideSlide key={index}>
-            {/* <JobSummary title={list.title} price={list.price} unit={list.unit} type={list.type} location={list.location} language={list.language}  /> */}
-            <div className="job-summary">
-              <h4>{list.title}</h4>
-              <div>
-                <span>{list.price}</span>{list.unit}
+        <div className="new-list">
+          {jobOpenings.map((list: JobItem, index: number) => (
+            <SplideSlide key={index}>
+              <div className="job-summary">
+                <h4>{list.title}</h4>
+                <div>
+                  <span>{list.price}</span>{list.unit}
+                </div>
+                <div>{list.type}</div>
+                <div>{list.location}</div>
+                <div>{list.language}</div>
               </div>
-              <div>{list.type}</div>
-              <div>{list.location}</div>
-              <div>{list.language}</div>
-            </div>
-          </SplideSlide>
-        ))}
+            </SplideSlide>
+          ))}
+        </div>
       </Splide>
     </div>
   );

@@ -1,17 +1,22 @@
 .slider {
 
-    .job-summary {
-        border: 1px solid gray;
-        margin: 1em 0.5em 2em 0.5em;
-        padding: 10px;
+    .new-list {
+        display: flex;
+        flex-wrap: wrap;
 
-        h4 {
-            margin-bottom: 0.5em;
-        }
+        .job-summary {
+            border: 1px solid gray;
+            margin: 1em 0.5em 2em 0.5em;
+            padding: 10px;
 
-        span {
-            color: magenta;
-            font-weight: bold;
+            h4 {
+                margin-bottom: 0.5em;
+            }
+
+            span {
+                color: magenta;
+                font-weight: bold;
+            }
         }
     }
 }
