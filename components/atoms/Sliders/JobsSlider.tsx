@@ -38,6 +38,7 @@ const JobsSlider: React.FC<any> = ({ jobOpenings }) => {
     cover: true,
     height: "12em",
   };
+  
   const spOptions = {
     type: "loop",
     perPage: 1,

@@ -26,6 +26,138 @@ const Home: React.FC = () => {
     { name: "C++", url: "#" },
   ];
 
+  const framework: LinkItem[] = [
+    { name: "Node.js", url: "#" },
+    { name: "CakePHP", url: "#" },
+    { name: "Rails", url: "#" },
+    { name: "Spring", url: "#" },
+    { name: "flask", url: "#" },
+    { name: "Vue.js", url: "#" },
+    { name: "React", url: "#" },
+    { name: "SpringBoot", url: "#" },
+  ];
+
+  const infrastructure: LinkItem[] = [
+    { name: "AWS", url: "#" },
+    { name: "GCP", url: "#" },
+    { name: "LINUX", url: "#" },
+    { name: "Azure", url: "#" },
+  ];
+
+  const design: LinkItem[] = [
+    { name: "Photoshop", url: "#" },
+    { name: "illustrator", url: "#" },
+    { name: "Adobe XD", url: "#" },
+    { name: "figma", url: "#" },
+  ];
+
+  const others: LinkItem[] = [
+    { name: "SAP", url: "#" },
+    { name: "Salesforce", url: "#" },
+    { name: "ファイヤウォール", url: "#" },
+    { name: "Exchange", url: "#" },
+  ];
+
+  interface RegionData {
+    regionName: string;
+    prefectures: LinkItem[];
+  }
+
+  const regionData: RegionData[] = [
+    {
+      regionName: "北海道",
+      prefectures: [
+        { name: "北海道", url: "#" },
+      ],
+    },
+    {
+      regionName: "東北",
+      prefectures: [
+        { name: "青森県", url: "#" },
+        { name: "岩手県", url: "#" },
+        { name: "宮城県", url: "#" },
+        { name: "秋田県", url: "#" },
+        { name: "山形県", url: "#" },
+        { name: "福島県", url: "#" },
+      ],
+    },
+    {
+      regionName: "関東",
+      prefectures: [
+        { name: "茨城県", url: "#" },
+        { name: "栃木県", url: "#" },
+        { name: "群馬県", url: "#" },
+        { name: "埼玉県", url: "#" },
+        { name: "千葉県", url: "#" },
+        { name: "東京都", url: "#" },
+        { name: "神奈川県", url: "#" },
+      ],
+    },
+    {
+      regionName: "中部",
+      prefectures: [
+        { name: "新潟県", url: "#" },
+        { name: "富山県", url: "#" },
+        { name: "石川県", url: "#" },
+        { name: "福井県", url: "#" },
+        { name: "山梨県", url: "#" },
+        { name: "長野県", url: "#" },
+        { name: "岐阜県", url: "#" },
+        { name: "静岡県", url: "#" },
+        { name: "愛知県", url: "#" },
+      ],
+    },
+    {
+      regionName: "近畿",
+      prefectures: [
+        { name: "三重県", url: "#" },
+        { name: "滋賀県", url: "#" },
+        { name: "京都府", url: "#" },
+        { name: "兵庫県", url: "#" },
+        { name: "奈良県", url: "#" },
+        { name: "和歌山県", url: "#" },
+        { name: "大阪府", url: "#" },
+      ],
+    },
+    {
+      regionName: "中国",
+      prefectures: [
+        { name: "鳥取県", url: "#" },
+        { name: "島根県", url: "#" },
+        { name: "岡山県", url: "#" },
+        { name: "広島県", url: "#" },
+        { name: "山口県", url: "#" },
+      ],
+    },
+    {
+      regionName: "四国",
+      prefectures: [
+        { name: "徳島県", url: "#" },
+        { name: "香川県", url: "#" },
+        { name: "愛媛県", url: "#" },
+        { name: "高知県", url: "#" },
+      ],
+    },
+    {
+      regionName: "九州",
+      prefectures: [
+        { name: "福岡県", url: "#" },
+        { name: "佐賀県", url: "#" },
+        { name: "長崎県", url: "#" },
+        { name: "熊本県", url: "#" },
+        { name: "大分県", url: "#" },
+        { name: "宮城県", url: "#" },
+        { name: "鹿児島県", url: "#" },
+      ],
+    },
+    {
+      regionName: "沖縄",
+      prefectures: [
+        { name: "沖縄県", url: "#" },
+      ],
+    },
+  ];
+
   const newJobs: JobItem[] = [
     { title: "リモートワーク1", price: 50, unit: "万円/月額", type: "業務委託", location: "東京 ", language: "React" },
     { title: "リモートワーク2", price: 50, unit: "万円/月額", type: "業務委託", location: "東京 ", language: "React" },
@@ -54,33 +186,21 @@ const Home: React.FC = () => {
       <h4>開発言語</h4>
       <SingleLinks link={language} />
       <h4>フレームワーク</h4>
-      <SingleLinks link={language} />
+      <SingleLinks link={framework} />
       <h4>インフラ</h4>
-      <SingleLinks link={language} />
+      <SingleLinks link={infrastructure} />
       <h4>デザイン</h4>
-      <SingleLinks link={language} />
+      <SingleLinks link={design} />
       <h4>その他</h4>
-      <SingleLinks link={language} />
+      <SingleLinks link={others} />
 
       <h3>勤務地でフリーランス求人・案件を探す</h3>
-      <h4>北海道</h4>
-      <SingleLinks link={language} />
-      <h4>東北</h4>
-      <SingleLinks link={language} />
-      <h4>関東</h4>
-      <SingleLinks link={language} />
-      <h4>中部</h4>
-      <SingleLinks link={language} />
-      <h4>近畿</h4>
-      <SingleLinks link={language} />
-      <h4>中国</h4>
-      <SingleLinks link={language} />
-      <h4>四国</h4>
-      <SingleLinks link={language} />
-      <h4>九州</h4>
-      <SingleLinks link={language} />
-      <h4>沖縄</h4>
-      <SingleLinks link={language} />
+      {regionData.map((region, index) => (
+        <div key={index}>
+          <h4>{region.regionName}</h4>
+          <SingleLinks link={region.prefectures} />
+         </div>
+      ))}
 
       <h3>新着フリーランス求人・案件</h3>
       <div className="jobs">
