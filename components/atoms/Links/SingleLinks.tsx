@@ -5,8 +5,9 @@ interface LinkItemProps {
 }
 
 export interface LinkItem {
+  id?: number;
   name: string;
-  url: string;
+  url?: string;
 }
 
 const SingleLinks: React.FC<LinkItemProps> = ({ link }) => {

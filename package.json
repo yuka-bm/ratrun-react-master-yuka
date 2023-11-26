@@ -12,6 +12,7 @@
     "@splidejs/react-splide": "^0.7.12",
     "@types/node": "20.5.7",
     "@types/react-dom": "18.2.7",
+    "dayjs": "^1.11.10",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "font-awesome": "^4.7.0",

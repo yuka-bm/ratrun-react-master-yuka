@@ -6,12 +6,14 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import React, { useRef, RefObject, useState, useEffect } from "react";
 
 export interface JobItem {
-  title: string;
-  price: number;
-  unit: string;
-  type: string;
-  location: string;
+  area: string;
+  contract: string;
+  description: string;
+  id: number;
   language: string;
+  title: string;
+  unit_price: number;
+  unit?: string;
 }
 
 const JobsSlider: React.FC<any> = ({ jobOpenings }) => {
@@ -64,11 +66,11 @@ const JobsSlider: React.FC<any> = ({ jobOpenings }) => {
             <div className="job-summary">
               <h4>{list.title}</h4>
               <div>
-                <span>{list.price}</span>
-                {list.unit}
+                <span>{list.unit_price}</span>
+                {list.unit != null ? list.unit : "万円/月"}
               </div>
-              <div>{list.type}</div>
-              <div>{list.location}</div>
+              <div>{list.contract}</div>
+              <div>{list.area}</div>
               <div>{list.language}</div>
             </div>
           </SplideSlide>
