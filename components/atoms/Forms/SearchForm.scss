@@ -1,0 +1,26 @@
+.search-bar {
+    margin-bottom: 20px;
+    
+    .layout {
+        display: flex;
+
+        .box {
+            flex-grow: 1;
+            margin-right: 15px;
+
+            label {
+                font-size: 22px;
+                font-weight: bold;
+            }
+        }
+
+        #search {
+            background-color: white;
+        }
+
+        #search-button {
+            margin-top: 7px;
+        }
+    }
+}
+
