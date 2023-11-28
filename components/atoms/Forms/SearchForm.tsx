@@ -31,7 +31,7 @@ const SearchBar: React.FC = () => {
           <div className="box">
             <BasicInput label="フリーワードで案件検索" type="text" name="search" placeholder="キーワードを入れて探す"  value={input.search} inputValue={handleInput} />
           </div>
-          <BasicButton type="submit" name="search-button" image="" value="案件を検索" />
+          <BasicButton type="submit" name="search-button" value="案件を検索" />
         </div>
       </form>
     </div>

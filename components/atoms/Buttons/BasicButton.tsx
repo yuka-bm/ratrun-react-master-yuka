@@ -4,7 +4,7 @@ import Image from "next/image";
 interface BasicButtonProps {
   type: "button" | "submit" | "reset";
   name: string;
-  image: string;
+  image?: string;
   value: string;
   clickSubmit?: () => void;
 }
@@ -20,7 +20,7 @@ const BasicButton: React.FC<BasicButtonProps> = ({ type, name, image, value, cli
   return (
     <div className="basic_button">
       <button type={type} className={name} id={name} onClick={handleClick}>
-        <Image src={image} alt="" /> {value}
+        {image != null ? <Image src={image} alt="" /> : ''} {value}
       </button>
     </div>
   );
