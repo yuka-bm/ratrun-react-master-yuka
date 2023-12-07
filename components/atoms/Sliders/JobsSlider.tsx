@@ -18,11 +18,14 @@ export interface JobItem {
 
 const JobsSlider: React.FC<any> = ({ jobOpenings }) => {
   const breakPoint = 450; // 450はスマートフォンの幅を仮定
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= breakPoint);
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= breakPoint);
     };
+
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 
