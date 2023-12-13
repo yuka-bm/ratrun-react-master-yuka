@@ -32,7 +32,7 @@ const JobsSlider: React.FC<any> = ({ jobOpenings }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isMobile]);
 
   const splideRef: RefObject<any> = useRef(null);
 

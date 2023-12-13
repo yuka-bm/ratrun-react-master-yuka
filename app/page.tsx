@@ -5,6 +5,7 @@ import SearchBar from "@/components/atoms/Forms/SearchForm";
 import SingleLinks, { LinkItem } from "@/components/atoms/Links/SingleLinks";
 import JobsSlider, { JobItem } from "@/components/atoms/Sliders/JobsSlider";
 import Image from "next/image";
+import rocket from "@/assets/img/rocket.png";
 import {
   getJobInfo,
   getKeyword,
@@ -113,7 +114,7 @@ const Home: React.FC = () => {
       <div className="app-title">
         <div className="title">
           <div className="logo-area">
-              <Image src={require("@/assets/img/rocket.png")} alt="rocket" />
+              <Image src={rocket} alt="rocket" />
           </div>
           <h1>&nbsp;フリーランススタート</h1>
         </div>

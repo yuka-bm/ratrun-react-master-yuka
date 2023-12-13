@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import rocket from "@/assets/img/rocket.png";
 import "./AppHeader.scss";
 
 interface Page {
@@ -15,7 +16,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ pageList }) => {
   return (
     <header>
       <div className="logo-area">
-        <Image src={require("@/assets/img/rocket.png")} alt="rocket" />
+        <Image src={rocket} alt="rocket" />
       </div>
       <nav className="nav-area">
         <ul className="nav-area-list">
