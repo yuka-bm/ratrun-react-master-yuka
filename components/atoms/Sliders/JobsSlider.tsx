@@ -29,6 +29,10 @@ const JobsSlider: React.FC<any> = ({ jobOpenings }) => {
 
     window.addEventListener("resize", handleResize);
 
+    setTimeout(() => {
+      handleClick(1);
+    }, 1000);
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
