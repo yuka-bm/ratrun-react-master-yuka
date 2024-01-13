@@ -5,7 +5,7 @@ import SearchBar from "@/components/atoms/Forms/SearchForm";
 import SingleLinks, { LinkItem } from "@/components/atoms/Links/SingleLinks";
 import JobsSlider, { JobItem } from "@/components/atoms/Sliders/JobsSlider";
 import Image from "next/image";
-import rocket from "@/assets/img/rocket.png";
+import rocket from "@/assets/images/rocket.png";
 import {
   getJobInfo,
   getKeyword,

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import loading from "@/assets/gif/loading.gif";
+import loading from "@/assets/images/loading.gif";
 import "./BasicLoading.scss";
 
 const LoadingOverlay: React.FC = () => {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import rocket from "@/assets/img/rocket.png";
+import rocket from "@/assets/images/rocket.png";
 import "./AppHeader.scss";
 
 interface Page {
